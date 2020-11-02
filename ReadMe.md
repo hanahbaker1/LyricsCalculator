@@ -1,67 +1,16 @@
-# Setup Kafka
+# LyricsCalculator
+This is an application that accepts an artist name in the request and finds the average number of words for each of their songs it has found.
 
-To setup Kafka with data for a development environment, use the `SetUp.ps1` file within the `DevSetup` folder.
+#Prerequisites
+.Net Core SDK 3.1 (https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-This will first check if Kafka is running via a container name of "kafka" (Verify any other running Kafka containers first), and populate the instance with dummy acommodation data. 
+## Usage
+This application can be built and run using the dotnet CLI.
 
-The regions, properties, rooms and other Orlando data are based on SQL queries and supports running searches based on real queries.
+- Navigate to the root directory of the repository using a terminal window.
+- Run the project using the following command: `dotnet run --project LyricsCalculator\LyricsCalculator.Api.csproj`
+- Browse to https://localhost:5001/swagger/index.html
+- Click /LyricsStatistics/Search/Search and click Try it out, enter the desired artist's name in the textbox and press "Execute"
 
-# Integrating with Search Properties
-
-## Installation
-
-First off, ensure you install the following nuget package:
-
-`dotnet add package Jet2.Holidays.Search.Properties.ActorSystem`
-
-Next, the project needs to be configured from your Web API startup in a following places:
-
-## Actor System
-
-Assuming your system already has a started actor system, the nuget package provides extension methods to an actor system:
-
-```c#
-    var actorSystem = StartActorSystem(services);
-    services.AddSearchProperties(Configuration, actorSystem);
-    AddActorSystemDependencyResolver(actorSystem, services);
-```
-
-Starting an Actor System in the provided API looks like:
-
-```c#
-    private Akka.Actor.ActorSystem StartActorSystem(IServiceCollection services)
-    {
-        var akkaConfig = Configuration.GetSection("akka").Value;
-        var actorSystem = Akka.Actor.ActorSystem.Create("[YOURNAME]", akkaConfig);
-        
-        services.AddSingleton(actorSystem);
-        services.AddSingleton(actorSystem.Log);
-
-        return actorSystem;
-    }
-```
-
-Most of the other config and setup can be seen in the [Startup.cs](http://tfs01.harrogate.jet2.com:8080/tfs/Default/J2H/_git/Search.Properties?path=%2FJet2.Holidays.Search.Properties.WebApi%2FStartup.cs&version=GBdevelop&_a=contents).
-
-## Kafka Setup
-
-The current package relies on data flowing from Kafka, to get this data running currently you need to ensure the following lines are added to startup:
-
-```c#
-    services.AddKafka();
-    services.AddHostedService<ConsumerHostedService>();
-```
-
-# Making a Search
-
-Fortunately, only a single interface is required to perform a search 👍
-
-```c#
-    public interface ISearchRootActor
-    {
-        Task<SearchActor.SearchResultsMessage> Search(SearchActor.SearchRequestMessage query);
-    }
-```
-
-
-
+### Visual Studio
+Alternatively, open the project in Visual Studio and select the LyricsCalculator.Api as the startup project project, start the app using IIS Express or Kestrel.
