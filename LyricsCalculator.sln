@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsCalculator.Api", "LyricsCalculator.Api\LyricsCalculator.Api.csproj", "{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsCalculator.Processor", "LyricsCalculator.Processor\LyricsCalculator.Processor.csproj", "{9B6F4B69-B406-417D-A009-CAF727504159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsCalculator.Common", "LyricsCalculator.Common\LyricsCalculator.Common.csproj", "{D971C736-C826-43EA-B398-21FE69E832FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsCalculator.Api.Tests", "LyricsCalculator.Api.Tests\LyricsCalculator.Api.Tests.csproj", "{8E3BC7A1-2AB6-4EA8-A4C0-55B461185CA2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53} = {1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsCalculator.Common.Tests", "LyricsCalculator.Common.Tests\LyricsCalculator.Common.Tests.csproj", "{C39A088D-3A2A-4978-9AB7-D9EAB626C940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsCalculator.Processor.Tests", "LyricsCalculator.Processor.Tests\LyricsCalculator.Processor.Tests.csproj", "{175E44B7-FA0D-4ADA-B240-CA420F2C56C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD381A0-9F2A-44B2-B69F-D88ADA3C6E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6F4B69-B406-417D-A009-CAF727504159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6F4B69-B406-417D-A009-CAF727504159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6F4B69-B406-417D-A009-CAF727504159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6F4B69-B406-417D-A009-CAF727504159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D971C736-C826-43EA-B398-21FE69E832FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D971C736-C826-43EA-B398-21FE69E832FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D971C736-C826-43EA-B398-21FE69E832FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D971C736-C826-43EA-B398-21FE69E832FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3BC7A1-2AB6-4EA8-A4C0-55B461185CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3BC7A1-2AB6-4EA8-A4C0-55B461185CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3BC7A1-2AB6-4EA8-A4C0-55B461185CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3BC7A1-2AB6-4EA8-A4C0-55B461185CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39A088D-3A2A-4978-9AB7-D9EAB626C940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39A088D-3A2A-4978-9AB7-D9EAB626C940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39A088D-3A2A-4978-9AB7-D9EAB626C940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39A088D-3A2A-4978-9AB7-D9EAB626C940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{175E44B7-FA0D-4ADA-B240-CA420F2C56C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175E44B7-FA0D-4ADA-B240-CA420F2C56C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175E44B7-FA0D-4ADA-B240-CA420F2C56C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175E44B7-FA0D-4ADA-B240-CA420F2C56C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87C4C5D2-DB71-4540-B46D-100631CBA9D1}
+	EndGlobalSection
+EndGlobal
